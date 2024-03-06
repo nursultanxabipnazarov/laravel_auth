@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FloorController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[AuthController::class,'home'])->name('home');
+Route::get('/',[HomeController::class,'home'])->name('home');
 
 
-
+//Auth
 
 Route::get('/login',[AuthController::class,'loginView'])->name('loginView');
 
@@ -30,3 +32,10 @@ Route::get('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
 Route::post('/login',[AuthController::class,'login'])->name('login');
 
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+
+
+//Floor
+
+Route::get('floor/index',[FloorController::class,'index'])->name('indexFloor');
+Route::get('floor/create',[FloorController::class,'create'])->name('createFloor');
+Route::post('floor/store',[FloorController::class,'store'])->name('storeFloor');

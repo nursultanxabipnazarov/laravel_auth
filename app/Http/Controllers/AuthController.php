@@ -15,7 +15,7 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        return view('admin.home');
     }
 
     public function loginView()
@@ -25,7 +25,7 @@ class AuthController extends Controller
 
     public function registerView()
     {
-        return view('registr');
+        return view('register');
     }
 
     public function register(Request $request)
