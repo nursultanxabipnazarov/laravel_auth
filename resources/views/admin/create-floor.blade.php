@@ -20,7 +20,7 @@
                                 <div style="color: red">{{ $errors->first('name') }}</div>
                             @endif
                         </label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="name" value="{{old('name')}}" class="form-control">
                     </div>
 
                     <div class="form-group">
