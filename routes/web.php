@@ -48,3 +48,9 @@ Route::get('/floor/destroy/{id}',[FloorController::class,'destroy'])->name('dest
 Route::get('/room/index',[RoomController::class,'index'])->name('indexRoom');
 Route::get('/room/create',[RoomController::class,'create'])->name('createRoom');
 Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
+
+
+
+//Student
+
+// Route::get('/home/student',[''])

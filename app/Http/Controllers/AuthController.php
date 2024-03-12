@@ -15,6 +15,18 @@ class AuthController extends Controller
 
     public function dashboard()
     {
+        $user_status = Auth::user()->status;
+        
+        if($user_status == "student"){
+
+            return view('student.home');
+        }elseif($user_status == "admin"){
+
+            return view('admin.home');
+        }
+       
+        
+        
         return view('admin.home');
     }
 
