@@ -14,9 +14,19 @@ return new class extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('surname');
-            $table->string('pasport_ka');
+            $table->string('lastname');
+            $table->string('firstname');
+            $table->string('jshshir');
+            $table->string('phone');
+            $table->string('regions');
+            $table->string('districts');
+            $table->string('quarters');
+            $table->string('street');
+            $table->string('privilege');
+            $table->string('privilege_file');
+            $table->string('fakultet');
+            $table->string('group');
+            $table->string('kurs');
             
 
             $table->timestamps();

@@ -10,6 +10,9 @@
         <li class="dropdown active">
           <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
+        <li class="dropdown active">
+          <a href="{{route('createApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Arza</span></a>
+        </li>
         {{-- <li class="dropdown active">
             <a href="" class="nav-link"><i data-feather="monitor"></i><span>Floor</span></a>
           </li>

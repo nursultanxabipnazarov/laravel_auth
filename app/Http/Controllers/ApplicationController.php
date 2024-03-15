@@ -6,5 +6,9 @@ use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
-    //
+    public function create(){
+
+        return view('student.create-application');
+        
+    }
 }

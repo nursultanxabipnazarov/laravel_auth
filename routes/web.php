@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FloorController;
 use App\Http\Controllers\HomeController;
@@ -53,4 +54,5 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 //Student
 
-// Route::get('/home/student',[''])
+
+Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
