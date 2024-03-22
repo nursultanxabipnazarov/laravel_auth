@@ -32,6 +32,7 @@
                         <!-- add content here -->
 
                         @yield('content')
+                        {{-- {{$slot}} --}}
 
                     </div>
                 </section>

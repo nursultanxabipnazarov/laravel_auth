@@ -5,7 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FloorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomController;
+use App\Livewire\Applic;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +58,8 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 
 Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
+
+
+//liveware
+
+Route::get('test',Applic::class);

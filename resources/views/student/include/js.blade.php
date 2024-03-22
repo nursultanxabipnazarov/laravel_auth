@@ -9,3 +9,4 @@
   <script src="admin/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="admin/assets/js/custom.js"></script>
+  @livewireScripts
