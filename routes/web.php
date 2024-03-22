@@ -58,6 +58,7 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 
 Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
+Route::post('/applicateion/store',[ApplicationController::class,'store'])->name('storeApp');
 
 
 //liveware

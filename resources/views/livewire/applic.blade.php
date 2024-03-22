@@ -8,7 +8,8 @@
                    
                 </div>
                 <div class="card-body">
-                    <form id="wizard_with_validation" action="" method="POST" enctype="multipart/form-data">
+                    <form id="wizard_with_validation" action="{{route('storeApp')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <h3>Account Information</h3>
                         <fieldset>
                             <div class="form-group form-float">
@@ -42,7 +43,7 @@
                             <div class="section-title"></div>
                             <div class="form-group">
                               <label>Viloyat</label>
-                              <select wire:model.live="regionId"   class="form-control selectric"  >
+                              <select wire:model.live="regionId"  name="region"  class="form-control selectric"  >
                                 <option value="">-select-</option>
                                 @foreach ($regions as $region)
                                     
@@ -55,7 +56,7 @@
                             <div class="form-group">
                               <label  >Shahar</label>
                               
-                              <select wire:model.live="cityId"   class="form-control selectric"  >
+                              <select wire:model.live="cityId" name="city"   class="form-control selectric"  >
                                 <option value="">-select-</option>
                                 @foreach ($cities as $city)
                                     
@@ -67,7 +68,7 @@
                             <div class="form-group">
                                 <label  >MPJ(APJ)*</label>
                                 
-                                <select wire:model.live=""   class="form-control selectric"  >
+                                <select wire:model.live="" name="mpj"  class="form-control selectric"  >
                                   <option value="">-select-</option>
                                   @foreach ($quarters as $quarter)
                                       
@@ -112,11 +113,15 @@
                                 <input type="file" class="custom-file-input" name="privilege_file" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
+
+                            <input type="submit" value="OK">
                         </fieldset>
-                        <h3> Finish</h3>
+                        {{-- <h3> Finish</h3>
                         <fieldset>
 
-                        </fieldset>
+                        </fieldset> --}}
+
+
                     </form>
                 </div>
             </div>

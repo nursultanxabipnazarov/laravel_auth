@@ -11,4 +11,8 @@ class ApplicationController extends Controller
         return view('student.create-application');
         
     }
+
+    public function store(Request $request){
+        dd($request->all());
+    }
 }
