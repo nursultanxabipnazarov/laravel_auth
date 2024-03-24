@@ -43,7 +43,7 @@
                             <div class="section-title"></div>
                             <div class="form-group">
                               <label>Viloyat</label>
-                              <select wire:model.live="regionId"  name="region"  class="form-control selectric"  >
+                              <select wire:model.live="regionId"  name="regions"  class="form-control selectric"  >
                                 <option value="">-select-</option>
                                 @foreach ($regions as $region)
                                     
@@ -56,7 +56,7 @@
                             <div class="form-group">
                               <label  >Shahar</label>
                               
-                              <select wire:model.live="cityId" name="city"   class="form-control selectric"  >
+                              <select wire:model.live="cityId" name="districts"   class="form-control selectric"  >
                                 <option value="">-select-</option>
                                 @foreach ($cities as $city)
                                     
@@ -68,7 +68,7 @@
                             <div class="form-group">
                                 <label  >MPJ(APJ)*</label>
                                 
-                                <select wire:model.live="" name="mpj"  class="form-control selectric"  >
+                                <select wire:model.live="" name="quarters"  class="form-control selectric"  >
                                   <option value="">-select-</option>
                                   @foreach ($quarters as $quarter)
                                       
@@ -77,12 +77,7 @@
                                
                                 </select>
                               </div>
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <label class="form-label">MPJ(APJ)*</label>
-                                    <input type="email" name="email" class="form-control" required>
-                                </div>
-                            </div>
+                       
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <label class="form-label">Koshe(uy)*</label>
@@ -114,12 +109,38 @@
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
 
-                            <input type="submit" value="OK">
+                          
                         </fieldset>
-                        {{-- <h3> Finish</h3>
+                        <h3> Finish</h3>
                         <fieldset>
+                      
+                              <div class="form-group">
+                                <label>Fakultet</label>
+                                <select wire:model.live="fakultet_id"  name="regions"  class="form-control selectric"  >
+                                  <option value="">-select-</option>
+                                  @foreach ($fakultets as $fakultet)
+                                      
+                                  <option value="{{$fakultet->id}}" > {{$fakultet->name}} </option>
+                                  @endforeach
+                               
+                                </select>
+                                
+                              </div>
+                              <div class="form-group">
+                                <label>Groups</label>
+                                <select wire:model.live=""  name="group_id"  class="form-control selectric"  >
+                                  <option value="">-select-</option>
+                                  @foreach ($groups as $group)
+                                      
+                                  <option value="{{$group->id}}" > {{$group->name}} </option>
+                                  @endforeach
+                               
+                                </select>
+                                
+                              </div>
 
-                        </fieldset> --}}
+                              <input class="mt-5 btn btn-primary"  type="submit" value="OK">
+                        </fieldset>
 
 
                     </form>

@@ -16,6 +16,12 @@
           <li class="dropdown active">
             <a href="{{route('indexRoom')}}" class="nav-link"><i data-feather="monitor"></i><span>Room</span></a>
           </li>
+          <li class="dropdown active">
+            <a href="{{route('indexFakultet')}}" class="nav-link"><i data-feather="monitor"></i><span>Fakulty</span></a>
+          </li>
+          <li class="dropdown active">
+            <a href="{{route('indexGroup')}}" class="nav-link"><i data-feather="monitor"></i><span>Group</span></a>
+          </li>
         <li class="dropdown">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
               data-feather="briefcase"></i><span>Widget</span></a>

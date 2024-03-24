@@ -13,6 +13,9 @@
         <li class="dropdown active">
           <a href="{{route('createApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Arza</span></a>
         </li>
+        <li class="dropdown active">
+          <a href="{{route('test')}}" class="nav-link"><i data-feather="monitor"></i><span>Test</span></a>
+        </li>
         {{-- <li class="dropdown active">
             <a href="" class="nav-link"><i data-feather="monitor"></i><span>Floor</span></a>
           </li>

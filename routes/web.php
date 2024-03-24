@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\FloorController;
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomController;
 use App\Livewire\Applic;
+use App\Models\Group;
 use Illuminate\Support\Facades\Route;
 
 
@@ -58,9 +61,29 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 
 Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
-Route::post('/applicateion/store',[ApplicationController::class,'store'])->name('storeApp');
+Route::post('/application/store',[ApplicationController::class,'store'])->name('storeApp');
 
 
 //liveware
 
-Route::get('test',Applic::class);
+// Route::get('test',Applic::class);
+
+
+//Test
+
+Route::get('/test',[ApplicationController::class,'test'])->name('test');
+
+
+
+//Fakultet 
+Route::get('fakultet/index',[FacultyController::class,'index'])->name('indexFakultet');
+
+Route::get('/fakultet/create',[FacultyController::class,'create'])->name('createFakultet');
+Route::post('fakultet/store',[FacultyController::class,'store'])->name('storeFakultet');
+
+
+//Gruppa
+Route::get('/group/index',[GroupController::class,'index'])->name('indexGroup');
+
+Route::get('/group/create',[GroupController::class,'create'])->name('createGroup');
+Route::post('/group/store',[GroupController::class,'store'])->name('storeGroup');

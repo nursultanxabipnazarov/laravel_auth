@@ -15,4 +15,9 @@ class ApplicationController extends Controller
     public function store(Request $request){
         dd($request->all());
     }
+
+
+    public function test(){
+        return view('student.test');
+    }
 }

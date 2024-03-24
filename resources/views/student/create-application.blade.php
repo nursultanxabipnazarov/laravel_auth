@@ -6,4 +6,5 @@
    
 @livewire('applic')
 
+
 @endsection
