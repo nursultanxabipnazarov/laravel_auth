@@ -59,7 +59,7 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 //Student
 
-
+Route::get('/application/index',[ApplicationController::class,'index'])->name('indexApp');
 Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
 Route::post('/application/store',[ApplicationController::class,'store'])->name('storeApp');
 
@@ -87,3 +87,8 @@ Route::get('/group/index',[GroupController::class,'index'])->name('indexGroup');
 
 Route::get('/group/create',[GroupController::class,'create'])->name('createGroup');
 Route::post('/group/store',[GroupController::class,'store'])->name('storeGroup');
+
+
+//admin/application
+
+Route::get('admin/application/index',[ApplicationController::class,'index'])->name('indexApp');

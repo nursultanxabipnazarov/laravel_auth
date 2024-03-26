@@ -14,6 +14,9 @@
           <a href="{{route('createApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Arza</span></a>
         </li>
         <li class="dropdown active">
+          <a href="{{route('indexApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Meniń arzalarım</span></a>
+        </li>
+        <li class="dropdown active">
           <a href="{{route('test')}}" class="nav-link"><i data-feather="monitor"></i><span>Test</span></a>
         </li>
         {{-- <li class="dropdown active">
