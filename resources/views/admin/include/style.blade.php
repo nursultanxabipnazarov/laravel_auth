@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="  admin/assets/css/app.min.css">
+  <link rel="stylesheet" href="admin/assets/bundles/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="admin/assets/bundles/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="admin/assets/bundles/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="admin/assets/bundles/jquery-selectric/selectric.css">
+
+
 <link rel="stylesheet" href="admin/assets/css/app.min.css">
 <!-- Template CSS -->
 <link rel="stylesheet" href="admin/assets/css/style.css">

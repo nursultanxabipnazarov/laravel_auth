@@ -56,7 +56,15 @@ class ApplicationController extends Controller
     }
 
 
-    public function test(){
-        return view('student.test');
+    public function show($id){
+        $app = Application::findOrFail($id);
+
+    return view('student.single-app',compact('app'));
+
+
     }
+
+
+
+
 }

@@ -3,7 +3,7 @@
 @section('title', 'INDEX|APP')
 
 @section('content')
-
+@include('sweetalert::alert')
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -70,7 +70,7 @@
                                     </td>
 
 
-                                    <td><a href="#" class="btn btn-primary">Detail</a></td>
+                                    <td><a href="{{route('adminSHowApp',$application->id)}}" class="btn btn-primary">Detail</a></td>
                                 </tr>
                             @endforeach
 

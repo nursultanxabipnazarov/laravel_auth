@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\FloorController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomController;
 use App\Livewire\Applic;
 use App\Models\Group;
@@ -57,11 +59,12 @@ Route::post('room/store',[RoomController::class,'store'])->name('storeRoom');
 
 
 
-//Student
+//Student app
 
 Route::get('/application/index',[ApplicationController::class,'index'])->name('indexApp');
 Route::get('/application/create',[ApplicationController::class,'create'])->name('createApp');
 Route::post('/application/store',[ApplicationController::class,'store'])->name('storeApp');
+Route::get('/application/show/{id}',[ApplicationController::class,'show'])->name('showApp');
 
 
 //liveware
@@ -92,3 +95,10 @@ Route::post('/group/store',[GroupController::class,'store'])->name('storeGroup')
 //admin/application
 
 Route::get('admin/application/index',[ApplicationController::class,'index'])->name('indexApp');
+Route::get('admin/application/show/{id}',[AdminController::class,'show'])->name('adminSHowApp');
+
+
+//Message
+
+Route::post('app/message/',[MessageController::class,'store'])->name('storeMessage');
+
