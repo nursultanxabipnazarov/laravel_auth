@@ -9,9 +9,11 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\StudentController;
 use App\Livewire\Applic;
 use App\Models\Group;
 use Illuminate\Support\Facades\Route;
+
 
 
 /*
@@ -102,3 +104,4 @@ Route::get('admin/application/show/{id}',[AdminController::class,'show'])->name(
 
 Route::post('app/message/',[MessageController::class,'store'])->name('storeMessage');
 
+Route::get('messages/',[StudentController::class,'getMessage'])->name('getMessage');

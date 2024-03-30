@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('app_id');
             $table->string('title');
             $table->text('body');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

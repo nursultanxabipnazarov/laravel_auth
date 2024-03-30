@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+
 
 class AuthController extends Controller
 {   
@@ -18,8 +20,8 @@ class AuthController extends Controller
         $user_status = Auth::user()->status;
         
         if($user_status == "student"){
-
-            return view('student.home');
+           
+            return view('student.home'  );
         }elseif($user_status == "admin"){
 
             return view('admin.home');
