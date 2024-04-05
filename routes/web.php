@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\FloorController;
@@ -11,10 +12,10 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\StudentController;
 use App\Livewire\Applic;
+use App\Models\Attachment;
 use App\Models\Group;
 use Illuminate\Support\Facades\Route;
-
-
+use Symfony\Component\Translation\MessageCatalogue;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,3 +106,11 @@ Route::get('admin/application/show/{id}',[AdminController::class,'show'])->name(
 Route::post('app/message/',[MessageController::class,'store'])->name('storeMessage');
 
 Route::get('messages/',[StudentController::class,'getMessage'])->name('getMessage');
+
+Route::get('message/view-all/',[MessageController::class,'viewAll'])->name('viewAll');
+
+//
+
+//Attachment
+
+Route::get('attachments/create/',[AttachmentController::class,'create'])->name('createAttachment');

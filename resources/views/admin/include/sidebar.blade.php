@@ -23,7 +23,10 @@
             <a href="{{route('indexGroup')}}" class="nav-link"><i data-feather="monitor"></i><span>Group</span></a>
           </li>
           <li class="dropdown active">
-            <a href="{{route('indexApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Applications</span></a>
+            <a href="{{route('indexApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Applications <span style="color: red" > [ {{$messageApp}} ]</span></a>
+          </li>
+          <li class="dropdown active">
+            <a href="{{route('createAttachment')}}" class="nav-link"><i data-feather="monitor"></i><span>Attachment</span></a>
           </li>
         <li class="dropdown">
           <a href="#" class="menu-toggle nav-link has-dropdown"><i

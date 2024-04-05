@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\Controllers\StudentController;
+use App\Models\Application;
 use App\Models\Message;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+        
         View::composer('*', function ($view) {
             if (Auth::check()) {
                 $user_id = Auth::user()->id;
@@ -35,5 +37,14 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('message', $message);
             }
         });
+        
+
+        View::composer('*', function ($view) {
+            if (Auth::check()) {
+                $messageApp = Application::where('status','proces')->count();
+                $view->with('messageApp', $messageApp);
+            }
+        });
+
     }
 }
