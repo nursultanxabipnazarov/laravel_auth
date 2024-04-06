@@ -113,4 +113,8 @@ Route::get('message/view-all/',[MessageController::class,'viewAll'])->name('view
 
 //Attachment
 
-Route::get('attachments/create/',[AttachmentController::class,'create'])->name('createAttachment');
+Route::get('attachments/create/{id}',[AttachmentController::class,'create'])->name('createAttachment');
+Route::get('attachment/success/app',[AttachmentController::class,'index'])->name('successApp');
+Route::post('attachment/store',[AttachmentController::class,'store'])->name('storeAttach');
+Route::get('attachment/index',[AttachmentController::class,'indexAttached'])->name('indexAttached');
+Route::get('attachment/index/room/{id}',[AttachmentController::class,'indexAttachedRoom'])->name('indexAttachedRoom');

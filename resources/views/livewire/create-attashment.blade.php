@@ -1,14 +1,14 @@
 <div>
 
-    <h1>{{$floorId}} </h1>
+    <h1> </h1>
     <div class="form-group">
         <label>Floors</label>
-        <select wire:model.defer="floorId"  name="floorId"  class="form-control selectric"  >
+        <select wire:model.live="floor_id"  name="floor_id"  class="form-control selectric"  >
         <option value="">-select-</option>
       
             @foreach ($floors as $floor )
                 
-            <option value="{{$floor->id}}" > {{$floor->name}}  </option>
+            <option value=" {{$floor->id}} " > {{$floor->name}}  </option>
             @endforeach
 
     
@@ -17,12 +17,14 @@
     </div>
     <div class="form-group">
         <label>Rooms</label>
-        <select wire:model.live=""  name="room_id"  class="form-control selectric"  >
+        <select wire:model.live="roomId"  name="room_id"  class="form-control selectric"  >
         <option value="">-select-</option>
        
             @foreach ($rooms as $room)
-                
-            <option value="{{$room->id}}" > {{$room->floor_id}} </option>
+                @if ($room->capacity != 0)
+                    
+                <option value="{{$room->id}}" > {{$room->room_name}} </option>
+                @endif
             @endforeach
        
     

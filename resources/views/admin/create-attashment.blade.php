@@ -14,10 +14,11 @@
 
         <a  class="btn btn-primary" href=""></a>
 
-        <form action="" method="post">
+        <form action="{{route('storeAttach')}}" method="post">
             @csrf
           @livewire('create-attashment')
-
+            <input type="hidden" value="{{$app->id}}" name="app_id">
+          <input type="submit" class="btn btn-success"  value="Attach" >
         </form>
 
 
