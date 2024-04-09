@@ -16,9 +16,7 @@
         <li class="dropdown active">
           <a href="{{route('indexApp')}}" class="nav-link"><i data-feather="monitor"></i><span>Meniń arzalarım</span></a>
         </li>
-        <li class="dropdown active">
-          <a href="{{route('test')}}" class="nav-link"><i data-feather="monitor"></i><span>Test</span></a>
-        </li>
+       
         {{-- <li class="dropdown active">
             <a href="" class="nav-link"><i data-feather="monitor"></i><span>Floor</span></a>
           </li>
