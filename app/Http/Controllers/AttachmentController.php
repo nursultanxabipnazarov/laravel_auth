@@ -65,4 +65,7 @@ class AttachmentController extends Controller
         return view('admin.index-attached-room',compact('rooms'));
     }
 
+
+    
+
 }

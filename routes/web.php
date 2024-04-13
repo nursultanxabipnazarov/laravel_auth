@@ -9,10 +9,12 @@ use App\Http\Controllers\FloorController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\StudentController;
 use App\Models\Group;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -96,4 +98,4 @@ Route::get('messages/', [StudentController::class, 'getMessage'])->name('getMess
 
 Route::get('message/view-all/', [MessageController::class, 'viewAll'])->name('viewAll');
 
-//
+Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
